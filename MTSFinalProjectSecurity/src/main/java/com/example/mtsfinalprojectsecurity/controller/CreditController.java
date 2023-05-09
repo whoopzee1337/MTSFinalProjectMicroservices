@@ -68,12 +68,17 @@ public class CreditController {
     }
 
     @PostMapping("deleteOrder")
-    public String deleteOrder(@ModelAttribute("delete") LoanOrderDeleteDto deleteDto) {
+    public String deleteOrder(@ModelAttribute("delete") LoanOrderDeleteDto deleteDto, Model model) {
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
 
         deleteDto.setUserId(userService.getUserByUsername(authentication.getName()).getId());
 
-        webClientService.deleteOrder(deleteDto);
+        Response response = webClientService.deleteOrder(deleteDto);
+
+        if (response != null) {
+            model.addAttribute("error", response.getError());
+            return "errorPage";
+        }
         return "redirect:http://localhost:8765/security-service/account";
 
     }
