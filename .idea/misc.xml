@@ -5,6 +5,12 @@
     <option name="originalFiles">
       <list>
         <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/../MTSFinalProjectApiGateway/pom.xml" />
+        <option value="$PROJECT_DIR$/../MTSFinalProjectEurekaServer/pom.xml" />
+        <option value="$PROJECT_DIR$/MTSFinalProjectApiGateway/pom.xml" />
+        <option value="$PROJECT_DIR$/MTSFinalProjectEurekaServer/pom.xml" />
+        <option value="$PROJECT_DIR$/MTSFinalProjectSecurity/pom.xml" />
+        <option value="$PROJECT_DIR$/MTSFinalProject/pom.xml" />
       </list>
     </option>
   </component>
